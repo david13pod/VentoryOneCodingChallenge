@@ -44,7 +44,6 @@ class Plain_Carton_Line_Item(models.Model):
 class Fba(models.Model):
     site = models.CharField(max_length=300,default='amazon.de')
     
-
     @property
     def create_suggestion(self):
         suggestion_dict ={}

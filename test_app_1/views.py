@@ -14,7 +14,6 @@ def ajax_get_table_data(request):
     response_dict = []
     action = request.POST.get('action', '')
 
-
     if action == "dt_sugg_fba_send_ins":
         suggestions=Fba.objects.get(site='amazon.de')
         suggest_dict=suggestions.create_suggestion
