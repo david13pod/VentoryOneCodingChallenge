@@ -17,6 +17,7 @@ def ajax_get_table_data(request):
     if action == "dt_sugg_fba_send_ins":
         suggestions=Fba.objects.get(site='amazon.de')
         suggest_dict=suggestions.create_suggestion
+        # print(suggest_dict)
         suggest_warehouse_keys=suggest_dict["amazon.de"]["source_warehouses"].keys()
         warehouses = Warehouse.objects.all()
         for wh in warehouses:
